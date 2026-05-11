@@ -32,7 +32,6 @@
     min-height: 100vh;
   }
 
-  /* HEADER */
   header {
     background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
     color: white;
@@ -74,14 +73,12 @@
     opacity: 0.9;
   }
 
-  /* MAIN LAYOUT */
   .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 28px 32px;
   }
 
-  /* SECTION TITLE */
   .section-title {
     font-size: 13px;
     font-weight: 700;
@@ -100,7 +97,6 @@
     background: var(--border);
   }
 
-  /* CARDS */
   .card {
     background: var(--white);
     border-radius: var(--radius);
@@ -110,7 +106,6 @@
     border: 1px solid var(--border);
   }
 
-  /* CLIENTE SECTION */
   .cliente-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -145,7 +140,6 @@
     box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
   }
 
-  /* ITENS SECTION */
   .item-card {
     background: var(--white);
     border-radius: var(--radius);
@@ -207,12 +201,6 @@
     gap: 14px;
     margin-bottom: 16px;
   }
-  .item-grid-wide {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 16px;
-  }
   .item-grid-3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -220,7 +208,6 @@
     margin-bottom: 16px;
   }
 
-  /* MINI LABEL */
   .mini-label {
     font-size: 11px;
     font-weight: 700;
@@ -230,26 +217,14 @@
     margin-bottom: 4px;
   }
 
-  /* ACCESSORY ROW */
   .acessorio-row {
     display: grid;
-    grid-template-columns: 2fr 1fr auto;
+    grid-template-columns: 1fr auto;
     gap: 10px;
-    align-items: end;
-    margin-bottom: 10px;
-  }
-  .acessorio-section-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
-    border-bottom: 1px dashed var(--border);
+    align-items: center;
+    margin-bottom: 4px;
   }
 
-  /* VALUE DISPLAY */
   .value-display {
     background: var(--accent-light);
     border: 1.5px solid var(--accent);
@@ -263,7 +238,6 @@
     align-items: center;
   }
 
-  /* SUBTOTAL BAR */
   .item-subtotal {
     display: flex;
     gap: 12px;
@@ -290,7 +264,6 @@
   .subtotal-chip.highlight .chip-label { color: rgba(255,255,255,0.7); }
   .subtotal-chip.highlight .chip-val { color: var(--accent); font-size: 18px; }
 
-  /* ADD ITEM BTN */
   .btn-add {
     width: 100%;
     padding: 14px;
@@ -314,7 +287,6 @@
     border-color: var(--secondary);
   }
 
-  /* TOTALS SECTION */
   .totals-card {
     background: linear-gradient(135deg, var(--primary) 0%, #1a252f 100%);
     border-radius: var(--radius);
@@ -346,7 +318,6 @@
   .total-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.2); }
   .discount-note { font-size: 12px; opacity: 0.6; margin-top: 2px; }
 
-  /* CONDIÇÕES */
   .condicoes-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -369,7 +340,6 @@
   .condicao-valor { font-size: 26px; font-weight: 800; color: var(--primary); }
   .condicao-desconto { font-size: 12px; color: var(--success); font-weight: 600; margin-top: 4px; }
 
-  /* ACTIONS */
   .actions-bar {
     display: flex;
     gap: 12px;
@@ -402,56 +372,7 @@
     border: 1.5px solid var(--border);
   }
   .btn-secondary:hover { background: var(--bg); border-color: var(--accent); }
-  .btn-danger { background: var(--danger); color: white; }
-  .btn-danger:hover { background: #c0392b; }
 
-  /* DIVIDER */
-  .divider { height: 1px; background: var(--border); margin: 8px 0 20px; }
-
-  /* RESPONSIVE */
-  @media (max-width: 900px) {
-    .container { padding: 16px; }
-    .cliente-grid, .item-grid, .item-grid-wide { grid-template-columns: 1fr 1fr; }
-    .condicoes-grid { grid-template-columns: 1fr; }
-    .totals-card { flex-direction: column; text-align: center; }
-    .total-divider { width: 60px; height: 1px; }
-  }
-  @media (max-width: 600px) {
-    .cliente-grid, .item-grid, .item-grid-wide, .item-grid-3 { grid-template-columns: 1fr; }
-  }
-
-  /* PRINT */
-  @media print {
-    header { position: relative; }
-    .btn-add, .btn-remove, .actions-bar { display: none !important; }
-    .card, .item-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
-  }
-
-  /* TOOLTIP */
-  [title] { cursor: help; }
-
-  /* INPUT NUMBER */
-  input[type=number] { -moz-appearance: textfield; }
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button { opacity: 1; }
-
-  /* SELECT */
-  select { cursor: pointer; }
-
-  /* BADGE */
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .badge-gold { background: var(--accent-light); color: var(--secondary); }
-
-  /* HIGHLIGHT ROW */
   .instalacao-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -462,16 +383,6 @@
     margin-bottom: 8px;
   }
 
-  /* EMPTY STATE */
-  .empty-state {
-    text-align: center;
-    padding: 40px;
-    color: var(--text-light);
-  }
-  .empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; }
-  .empty-state p { font-size: 15px; }
-
-  /* PROGRESS BAR */
   .summary-row {
     display: flex;
     gap: 8px;
@@ -490,6 +401,35 @@
     color: var(--text);
   }
   .summary-chip .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-gold { background: var(--accent-light); color: var(--secondary); }
+
+  @media (max-width: 900px) {
+    .container { padding: 16px; }
+    .cliente-grid, .item-grid { grid-template-columns: 1fr 1fr; }
+    .condicoes-grid { grid-template-columns: 1fr; }
+    .totals-card { flex-direction: column; text-align: center; }
+    .total-divider { width: 60px; height: 1px; }
+  }
+  @media (max-width: 600px) {
+    .cliente-grid, .item-grid, .item-grid-3 { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    header { position: relative; }
+    .btn-add, .btn-remove, .actions-bar { display: none !important; }
+    .card, .item-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+  }
 </style>
 </head>
 <body>
@@ -512,7 +452,6 @@
 
 <div class="container">
 
-  <!-- DADOS DO CLIENTE -->
   <div class="section-title">📋 Dados do Orçamento</div>
   <div class="card">
     <div class="cliente-grid">
@@ -535,20 +474,12 @@
     </div>
   </div>
 
-  <!-- ITENS -->
   <div class="section-title">🛋️ Itens do Orçamento</div>
-
   <div id="summary-row" class="summary-row" style="display:none"></div>
-
   <div id="itens-container"></div>
+  <button class="btn-add" onclick="adicionarItem()">＋ Adicionar Novo Item</button>
 
-  <button class="btn-add" onclick="adicionarItem()">
-    ＋ Adicionar Novo Item
-  </button>
-
-  <!-- TOTAIS -->
   <div class="section-title">💰 Resumo Financeiro</div>
-
   <div class="totals-card">
     <div class="total-block main">
       <div class="totals-label">Total Parcelado</div>
@@ -569,7 +500,6 @@
     </div>
   </div>
 
-  <!-- FORMAS DE PAGAMENTO -->
   <div class="section-title">💳 Formas de Pagamento</div>
   <div class="condicoes-grid">
     <div class="condicao-card parcelado">
@@ -595,8 +525,7 @@
     </div>
   </div>
 
-  <!-- CONDIÇÕES -->
-  <div class="card" style="background: #fffdf7; border-color: var(--accent);">
+  <div class="card" style="background:#fffdf7;border-color:var(--accent);">
     <div class="section-title" style="margin-bottom:10px;">📄 Condições Comerciais</div>
     <p style="font-size:13px; color:var(--text-light); line-height:1.7;">
       <strong style="color:var(--text);">Validade da Proposta:</strong> 07 dias corridos. Valores podem sofrer alterações após a conferência das medidas por nossa equipe técnica.<br>
@@ -604,17 +533,14 @@
     </p>
   </div>
 
-  <!-- AÇÕES -->
   <div class="actions-bar">
     <button class="btn btn-secondary" onclick="limparTudo()">🗑️ Limpar Tudo</button>
     <button class="btn btn-secondary" onclick="window.print()">🖨️ Imprimir</button>
     <button class="btn btn-primary" onclick="gerarResumo()">📋 Gerar Resumo</button>
   </div>
-
 </div>
 
-<!-- MODAL RESUMO -->
-<div id="modalOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:999; display:none; align-items:center; justify-content:center;">
+<div id="modalOverlay" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:999; align-items:center; justify-content:center;">
   <div style="background:white; border-radius:16px; max-width:600px; width:90%; max-height:85vh; overflow-y:auto; padding:32px; position:relative;">
     <button onclick="fecharModal()" style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:22px; cursor:pointer; color:#999;">✕</button>
     <h2 style="margin-bottom:20px; color:var(--primary);">📋 Resumo do Orçamento</h2>
@@ -627,10 +553,8 @@
 </div>
 
 <script>
-// ==================== DADOS ====================
-
+// ===== TABELAS DE PREÇO =====
 const PRECOS = {
-  // CORTINA SOB MEDIDA - preço por m linear (largura)
   "LINHO CAPRI OFF": { CORTINA_SOB_MEDIDA: 100 },
   "LINHO CAPRI BRANCO": { CORTINA_SOB_MEDIDA: 100 },
   "LINHO CAPRI MARROM": { CORTINA_SOB_MEDIDA: 100 },
@@ -649,8 +573,8 @@ const PRECOS = {
   "LINHO FLAT CINZA": { CORTINA_SOB_MEDIDA: 100 },
   "LINHO NATURE TABACO": { CORTINA_SOB_MEDIDA: 100 },
   "LINHO NATURE NATURAL": { CORTINA_SOB_MEDIDA: 100 },
-  "LINHO PARATI": { CORTINA_SOB_MEDIDA: 140 },
-  "CAMBURI LINHO": { CORTINA_SOB_MEDIDA: 100 },
+  "LINHO PARATI (SUBSTITUTO LINHO CRU 04)": { CORTINA_SOB_MEDIDA: 140 },
+  "CAMBURI LINHO (SUBSTITUTO LINHO CRU 02)": { CORTINA_SOB_MEDIDA: 100 },
   "LINHO RÚSTICO BRANCO": { CORTINA_SOB_MEDIDA: 140 },
   "LINHO RÚSTICO CINZA": { CORTINA_SOB_MEDIDA: 140 },
   "LINHO RÚSTICO CRU": { CORTINA_SOB_MEDIDA: 140 },
@@ -678,6 +602,24 @@ const PRECOS = {
 };
 
 const ACESSORIOS = {
+  "REDUTOR DE PESO ROLÔ": { preco: 120, tipo: "UNIDADE" },
+  "BANDÔ MDF": { preco: 145, tipo: "ML" },
+  "BANDÔ ALUMÍNIO": { preco: 145, tipo: "ML" },
+  "BANDÔ CAIXA BOX 70 ROLÔ": { preco: 195, tipo: "ML" },
+  "BANDÔ CAIXA BOX 90 ROLÔ": { preco: 242, tipo: "ML" },
+  "MOTOR 10KG + CONTROLE ROLÔ": { preco: 900, tipo: "UNIDADE" },
+  "MOTOR 20KG + CONTROLE ROLÔ": { preco: 1100, tipo: "UNIDADE" },
+  "MOTOR 10KG + CONTROLE ROMANA H50MM": { preco: 1140, tipo: "UNIDADE" },
+  "MOTOR 20KG + CONTROLE ROMANA H50MM": { preco: 1340, tipo: "UNIDADE" },
+  "MOTOR 10KG BATERIA + CONTROLE GP ROLÔ": { preco: 1100, tipo: "UNIDADE" },
+  "MOTOR 26KG BATERIA + CONTROLE GP ROLÔ": { preco: 1580, tipo: "UNIDADE" },
+  "MOTOR 10KG BATERIA + CONTROLE GP ROMANA H50MM": { preco: 1340, tipo: "UNIDADE" },
+  "MOTOR 26KG BATERIA + CONTROLE GP ROMANA H50MM": { preco: 1780, tipo: "UNIDADE" },
+  "EMISSOR CONTROLE GP15 CANAIS": { preco: 200, tipo: "UNIDADE" },
+  "CARREGADOR PARA AUTOMAÇÃO GP BIVOLT": { preco: 80, tipo: "UNIDADE" },
+  "MONOCONTROLE H25 H50 MM": { preco: 150, tipo: "ML" },
+  "DUPLEX H25MM": { preco: 10, tipo: "PERCENTUAL" },
+  "FITA": { preco: 20, tipo: "PERCENTUAL" },
   "TRILHO SUÍÇO SIMPLES": { preco: 20, tipo: "ML" },
   "TRILHO SUÍÇO DUPLO": { preco: 50, tipo: "ML" },
   "VARÃO DESLIZANTE SIMPLES": { preco: 120, tipo: "ML" },
@@ -699,19 +641,9 @@ const ACESSORIOS = {
   "BK 70% CINZA": { preco: 100, tipo: "ML" },
   "BK 70% LINHO MARFIM": { preco: 130, tipo: "ML" },
   "BK 70% LINHO PRATA": { preco: 130, tipo: "ML" },
-  "BANDÔ MDF": { preco: 145, tipo: "ML" },
-  "BANDÔ ALUMÍNIO": { preco: 145, tipo: "ML" },
-  "BANDÔ CAIXA BOX 70 ROLÔ": { preco: 195, tipo: "ML" },
-  "BANDÔ CAIXA BOX 90 ROLÔ": { preco: 242, tipo: "ML" },
-  "MOTOR 10KG + CONTROLE ROLÔ": { preco: 900, tipo: "UNIDADE" },
-  "MOTOR 20KG + CONTROLE ROLÔ": { preco: 1100, tipo: "UNIDADE" },
-  "REDUTOR DE PESO ROLÔ": { preco: 120, tipo: "UNIDADE" },
-  "MONOCONTROLE H25 H50 MM": { preco: 150, tipo: "ML" },
   "CORDÃO WAVE": { preco: 10, tipo: "PERCENTUAL" },
   "BAINHA PONTO PALITO": { preco: 20, tipo: "PERCENTUAL" },
   "BAINHA RELIGIOSA": { preco: 20, tipo: "PERCENTUAL" },
-  "DUPLEX H25MM": { preco: 10, tipo: "PERCENTUAL" },
-  "FITA": { preco: 20, tipo: "PERCENTUAL" },
 };
 
 const MODELOS = [
@@ -724,25 +656,12 @@ const MODELOS = [
   "PERSIANA_VERTICAL",
 ];
 
-const TECIDOS_CORTINA = [
-  "LINHO CAPRI OFF","LINHO CAPRI BRANCO","LINHO CAPRI MARROM","LINHO CAPRI CINZA",
-  "LINEN BRANCO","LINEN OFF","FORRO BRANCO","FORRO PRATA",
-  "LINHO CRU 02","LINHO CRU 04","LINHO CRU 05","LINHO CRU 06",
-  "LINHO BRISA","LINHO GAIA LINHO","LINHO GAIA BRANCO","LINHO FLAT CINZA",
-  "LINHO NATURE TABACO","LINHO NATURE NATURAL","LINHO PARATI","CAMBURI LINHO",
-  "LINHO RÚSTICO BRANCO","LINHO RÚSTICO CINZA","LINHO RÚSTICO CRU","LINHO RÚSTICO PRATA",
-  "MILANO BRANCO","SHANGTUNG BRANCO","SHANGTUNG BEGE","TELA RÚSTICA TURQUIA",
-  "VOIL LISO BRANCO","VOIL LISO OFF / MARFIM",
-  "BK 100% WHITE","BK 100% BRANCO","BK 100% CINZA","BK 100% OFF","BK 100% PALHA",
-  "BK 100% FLAT CROSS CINZA","BK 100% FLAT CROSS NATURAL","BK 100% RÚSTICO BEGE","BK 100% RÚSTICO PRATA",
-  "BK 70% AREIA","BK 70% BRANCO","BK 70% CINZA","BK 70% LINHO MARFIM","BK 70% LINHO PRATA",
-];
+const TECIDOS_CORTINA = Object.keys(PRECOS);
 
 const ACESSORIOS_KEYS = Object.keys(ACESSORIOS);
 
 let itemCount = 0;
 
-// ==================== INIT ====================
 document.addEventListener('DOMContentLoaded', () => {
   const hoje = new Date().toISOString().split('T')[0];
   document.getElementById('data').value = hoje;
@@ -754,18 +673,15 @@ function atualizarDataBadge() {
   const d = new Date();
   document.getElementById('dataBadge').textContent = d.toLocaleDateString('pt-BR', { weekday:'short', day:'2-digit', month:'short', year:'numeric' });
 }
-
 function atualizarVendedorBadge() {
   const v = document.getElementById('vendedor').value || '—';
   document.getElementById('vendedorBadge').textContent = v;
 }
 
-// ==================== ITEM ====================
 function adicionarItem() {
   itemCount++;
   const id = itemCount;
   const container = document.getElementById('itens-container');
-
   const div = document.createElement('div');
   div.className = 'item-card';
   div.id = `item-${id}`;
@@ -785,11 +701,9 @@ function buildItemHTML(id) {
       <div class="item-number">${id}</div>
       <div class="item-title">Novo Item</div>
       <div class="item-total-badge" id="badge-total-${id}">R$ 0,00</div>
-      <button class="btn-remove" onclick="removerItem(${id})" title="Remover item">✕</button>
+      <button class="btn-remove" onclick="removerItem(${id})">✕</button>
     </div>
     <div class="item-body">
-
-      <!-- LINHA 1: Identificação -->
       <div class="item-grid">
         <div class="form-group">
           <label>Ambiente</label>
@@ -811,7 +725,6 @@ function buildItemHTML(id) {
         </div>
       </div>
 
-      <!-- LINHA 2: Tecido + Franzimento -->
       <div class="item-grid">
         <div class="form-group">
           <label>Tecido / Cor Principal</label>
@@ -838,52 +751,45 @@ function buildItemHTML(id) {
         </div>
       </div>
 
-      <!-- ACESSÓRIOS -->
-      <div class="acessorio-section-label">🔧 Acessórios</div>
-
+      <div class="mini-label">🔧 Acessórios</div>
       <div class="item-grid-3">
-        <!-- Acessório 1 -->
         <div>
           <div class="mini-label">Acessório 1</div>
-          <div class="acessorio-row" style="grid-template-columns: 1fr auto;">
+          <div class="acessorio-row">
             <select id="acc1-${id}" onchange="calcularItem(${id})">${accOptions}</select>
             <div class="value-display" id="val-acc1-${id}" style="min-width:90px;">R$ 0</div>
           </div>
         </div>
-        <!-- Acessório 2 -->
         <div>
           <div class="mini-label">Acessório 2</div>
-          <div class="acessorio-row" style="grid-template-columns: 1fr auto;">
+          <div class="acessorio-row">
             <select id="acc2-${id}" onchange="calcularItem(${id})">${accOptions}</select>
             <div class="value-display" id="val-acc2-${id}" style="min-width:90px;">R$ 0</div>
           </div>
         </div>
-        <!-- Acessório 3 -->
         <div>
           <div class="mini-label">Acessório 3</div>
-          <div class="acessorio-row" style="grid-template-columns: 1fr auto;">
+          <div class="acessorio-row">
             <select id="acc3-${id}" onchange="calcularItem(${id})">${accOptions}</select>
             <div class="value-display" id="val-acc3-${id}" style="min-width:90px;">R$ 0</div>
           </div>
         </div>
       </div>
 
-      <!-- INSTALAÇÃO + EXTRA -->
       <div class="instalacao-row">
         <div class="form-group">
           <label>Instalação (R$)</label>
-          <input type="number" id="inst-${id}" step="0.01" min="0" placeholder="0,00" oninput="calcularItem(${id})" value="0" />
+          <input type="number" id="inst-${id}" step="0.01" min="0" value="0" oninput="calcularItem(${id})" />
         </div>
         <div class="form-group">
           <label>Valor Extra (R$)</label>
-          <input type="number" id="extra-${id}" step="0.01" min="0" placeholder="0,00" oninput="calcularItem(${id})" value="0" />
+          <input type="number" id="extra-${id}" step="0.01" min="0" value="0" oninput="calcularItem(${id})" />
         </div>
         <div class="form-group">
           <label>Descrição Extra</label>
-          <input type="text" id="extra-desc-${id}" placeholder="ex: suporte especial..." />
+          <input type="text" id="extra-desc-${id}" placeholder="Suporte, reforço, etc." />
         </div>
       </div>
-
     </div>
 
     <div class="item-subtotal">
@@ -896,7 +802,7 @@ function buildItemHTML(id) {
         <span class="chip-val" id="sub-acc-${id}">R$ 0</span>
       </div>
       <div class="subtotal-chip">
-        <span class="chip-label">Instalação</span>
+        <span class="chip-label">Instalação + Extra</span>
         <span class="chip-val" id="sub-inst-${id}">R$ 0</span>
       </div>
       <div class="subtotal-chip highlight">
@@ -913,14 +819,12 @@ function removerItem(id) {
   atualizarTotais();
   atualizarSummary();
 }
-
 function atualizarTituloItem(id) {
   const amb = document.getElementById(`amb-${id}`)?.value;
   const header = document.querySelector(`#item-${id} .item-title`);
   if (header) header.textContent = amb ? amb.charAt(0).toUpperCase() + amb.slice(1) : 'Novo Item';
 }
 
-// ==================== CÁLCULO ====================
 function calcularItem(id) {
   atualizarTituloItem(id);
 
@@ -931,19 +835,18 @@ function calcularItem(id) {
   const tecido = document.getElementById(`tecido-${id}`)?.value || '';
   const m2 = larg * alt;
 
-  // Tecido
   let valTecido = 0;
   if (tecido && PRECOS[tecido]) {
     const precoM = PRECOS[tecido][modelo] || PRECOS[tecido]['CORTINA_SOB_MEDIDA'] || 0;
     if (modelo === 'CORTINA_SOB_MEDIDA') {
-      // Cortina: preço por metro linear de largura × franzimento × altura proporcional
-      valTecido = precoM * larg * franz * alt;
+      // regra: cortina = largura × preço_base × franzimento
+      valTecido = precoM * larg * franz;
     } else {
+      // demais modelos = m²
       valTecido = precoM * m2;
     }
   }
 
-  // Acessórios
   const calcAcc = (accId) => {
     const nome = document.getElementById(`${accId}-${id}`)?.value;
     if (!nome || !ACESSORIOS[nome]) return 0;
@@ -963,7 +866,6 @@ function calcularItem(id) {
   const extra = parseFloat(document.getElementById(`extra-${id}`)?.value) || 0;
   const total = valTecido + totalAcc + inst + extra;
 
-  // Atualizar displays
   setText(`val-tecido-${id}`, fmt(valTecido));
   setText(`val-m2-${id}`, `${m2.toFixed(2)} m²`);
   setText(`val-acc1-${id}`, fmt(v1));
@@ -975,9 +877,7 @@ function calcularItem(id) {
   setText(`sub-total-${id}`, fmt(total));
   setText(`badge-total-${id}`, fmt(total));
 
-  // Salvar no dataset para leitura
   document.getElementById(`item-${id}`).dataset.total = total;
-
   atualizarTotais();
   atualizarSummary();
 }
@@ -986,7 +886,6 @@ function setText(id, val) {
   const el = document.getElementById(id);
   if (el) el.textContent = val;
 }
-
 function fmt(v) {
   return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
@@ -1021,7 +920,6 @@ function atualizarSummary() {
   });
 }
 
-// ==================== RESUMO ====================
 function gerarResumo() {
   const data = document.getElementById('data').value;
   const vendedor = document.getElementById('vendedor').value || '—';
@@ -1082,21 +980,18 @@ function gerarResumo() {
     </div>
   `;
 
-  const modal = document.getElementById('modalOverlay');
-  modal.style.display = 'flex';
+  document.getElementById('modalOverlay').style.display = 'flex';
 }
 
 function fecharModal() {
   document.getElementById('modalOverlay').style.display = 'none';
 }
-
 function copiarResumo() {
   const conteudo = document.getElementById('resumoConteudo').innerText;
   navigator.clipboard.writeText(conteudo).then(() => {
     alert('Resumo copiado para área de transferência!');
   });
 }
-
 function limparTudo() {
   if (!confirm('Tem certeza que deseja limpar tudo?')) return;
   document.getElementById('itens-container').innerHTML = '';
@@ -1109,8 +1004,6 @@ function limparTudo() {
   itemCount = 0;
   adicionarItem();
 }
-
-// Fechar modal ao clicar fora
 document.getElementById('modalOverlay').addEventListener('click', function(e) {
   if (e.target === this) fecharModal();
 });
